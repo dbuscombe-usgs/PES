@@ -1,0 +1,7 @@
+data_out/*.*
+data_out/NEP/*.*
+data_out/rBack/*.*
+ind_data_res/*.*
+catboost_info/*
+saits/*
+saits_out/*
