@@ -145,7 +145,8 @@ rbackfiles = np.array(files)[np.where(np.array(T)=='rBack1_978')]
 nepfiles = np.array(files)[np.where(np.array(T)=='NEP1_56')]
 
 D=[]
-for file in rbackfiles:
+# for file in rbackfiles:
+for file in nepfiles:
 
     data = pd.read_csv(file) # Dataframe Loading Example
 
@@ -202,13 +203,15 @@ for file in rbackfiles:
 # data.drop(['time'], axis=1, inplace=True)
 # 
 
-dataset = 'rBack'
+# dataset = 'rBack'
+
+dataset = 'NEP'
 train_size = 0.8
 prop_missing = 0.25
 d_model = 128
 d_ffn = 128
 
-for timesteps in [100, 300, 500]:
+for timesteps in [50, 100, 300]:
     show_timeseries = timesteps
 
     concat_data = pd.concat(D, axis=0) # concatenating along columns
